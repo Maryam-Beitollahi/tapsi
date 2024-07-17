@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:root {
+  --color--primary: rgba(49, 154, 149, 0.891);
+  --color--secondary: rgba(147, 164, 239, 0.506);
+  --color--link: rgb(43, 43, 237);
+}
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "Vazirmatn-FD";
+  src: url("/assets/fonts/Vazirmatn-FD-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.container {
+  max-width: 1140px;
+  margin: 2rem auto;
+}
+.box {
+  font-family: "vazirmatn-FD";
+}
+.box__header {
+  padding: 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 2.5rem;
+}
+.box__items {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.box__item {
+  padding: 2rem 2rem;
+}
+.item__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item__heading .heading__date {
+  color: gray;
+  font-size: 1.2rem;
+}
+.heading__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading__text a {
+  text-decoration: none;
+  color: var(--color--link);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.heading__text .heading__number {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  width: 30px;
+  height: 32px;
+  background-color: var(--color--secondary);
+  color: var(--color--link);
+  text-align: center;
+}
+.item__description {
+  margin-top: 2rem;
+}
+.item__description p {
+  color: gray;
+}
+.item__description h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.item__info {
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item__info img {
+  width: 20%;
+  height: auto;
+  border-radius: 7px;
+}
+.item__info .info__text {
+  margin-right: 0.25rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.info__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3rem;
+}
+.btn {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1rem 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.4rem;
+}
+.btn--primary {
+  background-color: var(--color--primary);
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .box__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .box__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

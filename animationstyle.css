@@ -1,0 +1,29 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  animation: loading 5s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5) rotate(45deg);
+  }
+  50% {
+    transform: scale(2) rotate(60deg);
+    background-color: red;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
